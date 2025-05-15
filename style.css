@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Norse';
+  src: url('fonts/Norse-Bold.otf') format('opentype');
+  font-weight: normal; 
+  font-style: normal; 
+  font-display: swap; 
+}
+
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -12,9 +20,18 @@
     interpolate-size: allow-keywords;
   }
 }
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(34, 30, 30);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: aliceblue;
+
 }
 
 img, picture, video, canvas, svg {
@@ -33,10 +50,82 @@ p, h1, h2, h3, h4, h5, h6 {
 p {
   text-wrap: pretty;
 }
+
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
 #root, #__next {
   isolation: isolate;
+}
+
+.wrapper {
+    display: flex;
+    height: 100dvh;
+    max-width: 80vw;
+    background-color: #2e4957;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.hero-image {
+  background-image: url('img/sidebar1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 30vw;
+  
+}
+
+.logo-bar {
+    font-family: 'Norse';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00000082;
+    padding: 2vh;
+    max-height: 10vh;
+    margin-top: 10rem;
+
+}
+
+.logo-bar img {
+    max-width: 100%;
+    height: auto;
+    max-height: 10vh;
+}
+
+.description {
+    padding: 3vh;
+    font-size: 1.6rem;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #3d5461a3;
+    box-shadow: 0px 4px 3px 0px #001e2d69;
+}
+
+fieldset {
+    border: none;
+}
+
+.row {
+    display: flex;
+    gap: 5rem;
+    padding: 1rem;
+}
+
+.form-cell {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-area {
+    margin: 5vh 3vh;
 }
