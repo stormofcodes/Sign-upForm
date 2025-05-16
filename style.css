@@ -28,12 +28,12 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url('img/knot4.jpg');
+  background-image: url('img/knot2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
-  background-color: rgb(0 0 0 / 76%);
+  background-color: rgb(15 44 63 / 96%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #b8dee9;
 
@@ -65,16 +65,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper {
+  position: relative;
+  z-index: 0;
   display: flex;
   height: 100dvh;
-  max-width: 80vw;
-  background-color: #2e49573f;
+  width: 85%;
+}
+
+.wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background-image: url('img/heroimg21.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  box-shadow: 0px 0px 20px 9px #000000b8,
-  inset 0px 0px 10px 0px #000000b8;
+  z-index: -1;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .main {
@@ -82,11 +92,17 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   justify-content: space-evenly;
   background-color: #001b2363;
+  box-shadow: 0px 0px 6px 0px #00000066;
 }
 
 .side-bar {
   min-width: 30vw;
   
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .logo-bar {
@@ -101,12 +117,13 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 0 0 2px #cfeaff,
   0 0 4px #a2ddff,
   0 0 10px #ffae42, 0 0 20px #ff7300;
+  animation: fadeIn 2s ease-out;
 }
 
 .logo-bar img {
   max-width: 100%;
   height: auto;
-  max-height: 15vh;
+  max-height: 18vh;
   filter: drop-shadow(0 0 2px #cfeaff) drop-shadow(0 0 5px #a2ddff) drop-shadow(0 0 10px #ffae42) drop-shadow(0 0 18px #ff7300);
 }
 
@@ -123,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   background-color: #131e39a3;
-  box-shadow: 4px 4px 7px 4px #00000069;
+  box-shadow: 0px 5px 6px 0px #00000069;
 }
 
 .form-container > p {
@@ -157,25 +174,38 @@ input {
   height: 3.5vh;
   font-size: 1rem;
   border-radius: 5px;
-  border: 2px solid #76afcb70;
+  border: 2px solid #4a6c7d70;
   outline: none;
   transition: all 0.2s ease-in-out;
   transform-origin: center;
+  background-color: #143042;
+  color: #b8dee9;
 }
 
 input:focus {
-  border-color: #3375e1;
+  border-color: #377581;
   box-shadow: 2px 2px 5px 2px rgb(22 40 71 / 42%);
   transform: scale(1.03);
 }
 
 
 input[type="password"]:invalid:not(:focus) {
-  border-color: #ef6744;
+  border-color: #ff7300;
+}
+
+input:-webkit-autofill {
+  transition: background-color 9999s ease-in-out 0s;
+  -webkit-text-fill-color: #b8dee9 !important;
+  background-color: #143042 !important;
+  border: 2px solid #4a6c7d70 !important;
 }
 
 .button-area {
   margin: 2rem;
+}
+
+.button-area > p {
+  font-size: 1.1rem;
 }
 
 button {
@@ -184,15 +214,32 @@ button {
   width: 13rem;
   border-radius: 10px;
   font-weight: 700;
-  background-color: #f18f39;
+  background-color: #dc9f6091;
   border: none;
   color: #c9e5ec;
-  box-shadow: 1px 2px 4px 1px #2d160a6b;
   font-family: 'Norse', sans-serif;
   font-size: 1.4rem;
+  box-shadow:
+    0 0 2px #cfeaff,
+    0 0 5px #a2ddff,
+    0 0 10px #ffae42,
+    0 0 18px #ff7300,
+    inset 0 0 3px 2px #ffae42;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 4px #cfeaff,
+    0 0 10px #a2ddff,
+    0 0 18px #ffae42,
+    0 0 25px #ff7300,
+    inset 0 0 5px 3px #ffae42;
 }
 
 a {
-  color: #f18f39; /* vanlig länk */
+  color: #ff7300;
+  font-weight: 700;
   text-decoration: none;
 }
