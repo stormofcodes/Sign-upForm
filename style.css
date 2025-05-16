@@ -28,7 +28,12 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: rgb(30 19 13);
+  background-image: url('img/knot4.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-color: rgb(0 0 0 / 76%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #b8dee9;
 
@@ -60,99 +65,107 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper {
-    display: flex;
-    height: 100dvh;
-    max-width: 80vw;
-    background-color: #2e4957;
-}
-
-.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.side-bar {
-  background-image: url('img/sidebar1.jpg');
+  display: flex;
+  height: 100dvh;
+  max-width: 80vw;
+  background-color: #2e49573f;
+  background-image: url('img/heroimg21.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  box-shadow: 0px 0px 20px 9px #000000b8,
+  inset 0px 0px 10px 0px #000000b8;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #001b2363;
+}
+
+.side-bar {
   min-width: 30vw;
   
 }
 
 .logo-bar {
-    font-family: 'Norse';
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #00000082;
-    padding: 1rem;
-    max-height: 15vh;
-    margin-top: 10rem;
-    gap: 10px;
-    font-size: 3rem;
+  font-family: 'Norse';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*background-color: #080d1ba3;*/
+  padding: 1rem;
+  max-height: 15vh;
+  margin-top: 10rem;
+  gap: 10px;
+  font-size: 3rem;
 }
 
 .logo-bar img {
-    max-width: 100%;
-    height: auto;
-    max-height: 10vh;
+  max-width: 100%;
+  height: auto;
+  max-height: 10vh;
+  filter: drop-shadow(0 0 2px #cfeaff) drop-shadow(0 0 5px #a2ddff) drop-shadow(0 0 10px #ffae42) drop-shadow(0 0 18px #ff7300);
 }
 
 .description {
-    padding: 0rem 2rem;
-    font-size: 1.6rem;
+  padding: 0rem 2rem;
+  font-size: 1.6rem;
 }
 
 .description p:last-of-type {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .form-container {
-    display: flex;
-    flex-direction: column;
-    background-color: #3d5461a3;
-    box-shadow: 0px 4px 3px 0px #001e2d69;
+  display: flex;
+  flex-direction: column;
+  background-color: #131e39a3;
+  box-shadow: 4px 4px 7px 4px #00000069;
 }
 
 .form-container > p {
-    margin-left: 2rem;
-    margin-top: 1rem;
-    font-size: 1.5rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.form-container p:first-of-type {
+  font-family: 'Norse', sans-serif;
 }
 
 fieldset {
-    border: none;
+  border: none;
 }
 
 .row {
-    display: flex;
-    gap: 5rem;
-    padding: 1rem;
+  display: flex;
+  gap: 5rem;
+  padding: 1rem;
 }
 
 .form-cell {
-    display: flex;
-    flex-direction: column;
-    font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
 }
 
 input {
-    min-width: 14vw;
-    height: 3.5vh;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 2px solid #76afcb70;
-    outline: none;
-    transition: all 0.2s ease-in-out;
-    transform-origin: center;
+  min-width: 14vw;
+  height: 3.5vh;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px solid #76afcb70;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  transform-origin: center;
 }
 
 input:focus {
-    border-color: #3375e1;
-    box-shadow: 2px 2px 5px 2px rgb(22 40 71 / 42%);
-    transform: scale(1.03);
+  border-color: #3375e1;
+  box-shadow: 2px 2px 5px 2px rgb(22 40 71 / 42%);
+  transform: scale(1.03);
 }
 
 
@@ -161,17 +174,19 @@ input[type="password"]:invalid:not(:focus) {
 }
 
 .button-area {
-    margin: 2rem;
+  margin: 2rem;
 }
 
 button {
-    margin-bottom: 2rem;
-    padding: 0.5rem 1.5rem;
-    width: 13rem;
-    border-radius: 10px;
-    font-weight: 700;
-    background-color: #b35425;
-    border: none;
-    color: #c9e5ec;
-    box-shadow: 1px 2px 4px 1px #2d160a6b;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1.5rem;
+  width: 13rem;
+  border-radius: 10px;
+  font-weight: 700;
+  background-color: #b35425;
+  border: none;
+  color: #c9e5ec;
+  box-shadow: 1px 2px 4px 1px #2d160a6b;
+  font-family: 'Norse', sans-serif;
+  font-size: 1.4rem;
 }
