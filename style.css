@@ -93,6 +93,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-evenly;
   background-color: #001b23a3;
   box-shadow: 0px 0px 6px 0px #00000066;
+  padding-top: 2rem;
 }
 
 .side-bar {
@@ -313,4 +314,30 @@ a {
 a:hover {
   color: #ffa94d;
   text-shadow: 0 0 2px #ffae42, 0 0 4px #ff7300;
+}
+
+.bottom {
+  display: flex;
+  justify-content: end;
+  padding: 0rem 1rem;
+  align-items: baseline;
+  max-height: 1rem;
+  gap: 10px;
+  color: #c5e2e970;
+  position: absolute;
+    bottom: 1rem;
+    left: 6vw;
+}
+
+.github-icon {
+    height: 1.2rem;
+    width: auto;
+    filter: brightness(0.6);
+    display: inline-block;
+    transition: transform 0.5s ease; 
+}
+
+.github-icon:hover {
+  transform: rotate(360deg) scale(1.05);
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.6));
 }
