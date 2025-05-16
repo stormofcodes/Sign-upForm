@@ -94,18 +94,19 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  /*background-color: #080d1ba3;*/
-  padding: 1rem;
-  max-height: 15vh;
-  margin-top: 10rem;
-  gap: 10px;
-  font-size: 3rem;
+  margin-top: 8rem;
+  gap: 20px;
+  font-size: 4rem;
+  color: #ebf8ff;
+  text-shadow: 0 0 2px #cfeaff,
+  0 0 4px #a2ddff,
+  0 0 10px #ffae42, 0 0 20px #ff7300;
 }
 
 .logo-bar img {
   max-width: 100%;
   height: auto;
-  max-height: 10vh;
+  max-height: 15vh;
   filter: drop-shadow(0 0 2px #cfeaff) drop-shadow(0 0 5px #a2ddff) drop-shadow(0 0 10px #ffae42) drop-shadow(0 0 18px #ff7300);
 }
 
@@ -183,10 +184,15 @@ button {
   width: 13rem;
   border-radius: 10px;
   font-weight: 700;
-  background-color: #b35425;
+  background-color: #f18f39;
   border: none;
   color: #c9e5ec;
   box-shadow: 1px 2px 4px 1px #2d160a6b;
   font-family: 'Norse', sans-serif;
   font-size: 1.4rem;
+}
+
+a {
+  color: #f18f39; /* vanlig länk */
+  text-decoration: none;
 }
